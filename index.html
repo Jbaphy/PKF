@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locura y Emoción</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+      color: #e0e0e0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    #content {
+      padding: 20px;
+      background: rgba(25, 25, 25, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+      animation: fadeIn 1s ease-in-out;
+      max-width: 600px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin: 0 0 20px;
+      color: #c7c7c7;
+    }
+    button {
+      background: #3a3a3a;
+      color: #e0e0e0;
+      border: 2px solid #5e5e5e;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s, border 0.3s;
+    }
+    button:hover {
+      background: #5e5e5e;
+      border-color: #909090;
+      transform: scale(1.1);
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <h1 id="text">Sabes</h1>
+    <button onclick="nextText()">Siguiente</button>
+  </div>
+
+  <script>
+    const textos = [
+      "Sabes",
+      "Por tu culpa",
+      "Una oleada de pensamientos infectó mi mente",
+      "Son diferentes a los que normalmente ocupo",
+      "Mis ideas son del tipo:",
+      "Si...",
+      "Entonces...",
+      "Pero...",
+      "...",
+      "Pero las que tengo por ti",
+      "Son muy diferentes",
+      "A pesar de carecer de mucha lógica, aún así son aceptadas",
+      "Saltan mi proceso de pensamiento",
+      "Evitan las barreras que coloco",
+      "Como si eso viniera no de fuera",
+      "Como si fuera dentro de mí",
+      "Y al mismo tiempo de ti",
+      "Como si eso estuviera en dos lugares al mismo tiempo",
+      "Dentro de mí",
+      "Por ti",
+      "Te quiero tanto",
+      "Pero me da miedo quererte",
+      "Por ti soy capaz de hacer algunas cosas que carecen de sentido",
+      "Como si tú tuvieras algo que hace saltar todo lo que intento poner",
+      "Como si mi ser lo único que quiere es estar contigo",
+      "Dentro de mí quisiera regresar el tiempo para poder hacer las cosas diferente",
+      "De manera diferente",
+      "Si tan solo pudiera",
+      "Iría en tu peor momento al rescate",
+      "¿Y sabes por qué?",
+      "Porque quiero que estés bien",
+      "Quiero estar contigo",
+      "Contigo no puedo hacer lo de siempre",
+      "Una vez que mis sentimientos interfieren en mi plan",
+      "Este fracasa",
+      "Sé que no he actuado bien",
+      "Sé que me he ido y sé que he hecho algunas cosas que realmente no debí hacer",
+      "Pero es mi manera de protegerme",
+      "Es mi forma de evitar quererte tanto que me negaría a soltarte",
+      "Como si fueras la única estrella que brilla en el cielo",
+      "Y si yo pudiera tenerte",
+      "Después no te soltaría",
+      "No aguantaría estar sin mi fuente de luz",
+      "Mi ser tendría un hueco en el pecho",
+      "Un hueco en el que cabrías perfectamente tú",
+      "Por eso",
+      "Para evitar tal cosa",
+      "Para evitar sentir que algo me falta",
+      "Prefiero no tener nada",
+      "¿Cómo podría extrañar algo que nunca tuve?",
+      "Si pudiera explicarlo con algo",
+      "Sería…",
+      "Intentar imaginar un nuevo color"
+      "No sé qué es lo que tienes aún",
+      "Es como si deseara ver a través de tus ojos",
+      "Me encanta la forma en la que tu mundo se forma",
+      "Se me hace tan interesante",
+      "Tan, tan diferente",
+      "Tan único",
+      "Amo las formas de visión diferentes a la mía",
+      "Los procesos diferentes al mío",
+      "Me encantan los conceptos intrincados y difíciles de entender",
+      "Nada no existe",
+      "Y ya que nada no puede existir",
+      "Lo que queda es existencia",
+      "Sabes",
+      "Tienes la capacidad de incluso saltar mi consciente",
+      "A veces",
+      "Las ideas o respuestas a alguna pregunta llegan de la nada",
+      "Como si durante el día",
+      "Aparte de mis ideas y los planes que formo",
+      "Mi cerebro se tomara el tiempo para pensar en ti",
+      "Incluso a escondidas de mí",
+      "Y en algún momento random",
+      "Durante el día",
+      "Alguna de tus locuras salta a mi mente",
+      "El hecho de que alguien pueda hacerme pensar sin pensar me hace estremecer",
+      "Le gustas tanto a mi cabeza",
+      "Le encanta pensar en ti",
+      "Cuando no estoy contigo",
+      "Estoy pensando en ti",
+      "Y cuando estoy pensando en ti",
+      "Estoy planeando cómo estar contigo",
+      "Fin."
+    ];
+
+    let index = 0;
+
+    function nextText() {
+      index = (index + 1) % textos.length;
+      document.getElementById("text").innerText = textos[index];
+    }
+  </script>
+</body>
+</html>
